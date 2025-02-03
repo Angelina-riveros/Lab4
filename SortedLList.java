@@ -26,7 +26,7 @@ public class SortedLList<T extends Comparable<? super T>> implements MinMaxListI
       Node newNode = new Node(newEntry);
       Node nodeBefore = null;
       Node nodeAfter = firstNode;
-      while (newEntry.compareTo(nodeAfter.getData()) > 0 && nodeAfter != null){
+      while ( nodeAfter != null && newEntry.compareTo(nodeAfter.getData()) > 0){
          nodeBefore = nodeAfter;
          nodeAfter = nodeAfter.getNextNode();
       }
